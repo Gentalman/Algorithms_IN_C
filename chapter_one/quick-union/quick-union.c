@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+#define	N 10000
+
+/* use c language to achieve the quick-union algorithms */
+int main(int argc, char **argv)
+{
+	int buf, i, j;
+	int p, q, data[N];
+	int access_data_array_times = 0;
+
+	for (i = 0; i < N; i++)	
+		data[i] = i;
+
+	while (scanf("%d %d", &p, &q) == 2) {
+		if (p >= N || q >= N) {
+			printf("input error: data can not be greater than %d\n", N); 
+			printf("please try again\n");
+
+			continue;
+		}
+		
+		//find the root of the tree
+		for (i = p; i != data[i]; i = data[i]) 
+			access_data_array_times++;
+		for (j = q; j != data[j]; j = data[j]) 
+			access_data_array_times++;
+
+		if (i == j)	{
+			printf("%d and %d is connect!\n", p , q);
+		}
+		else { 
+			data[i] = j;
+			access_data_array_times++;
+		}
+
+		/* 
+		for (i = 0; i < N; i++)
+			printf("%d ", data[i]);
+		printf("\n");	
+		*/
+
+		printf("access the data array times is %d\n", access_data_array_times);
+	}
+
+	return 0;
+}
