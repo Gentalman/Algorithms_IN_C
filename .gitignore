@@ -25,3 +25,5 @@
 *.hex
 # Debug files
 *.dSYM/
+# ignore Copies of documents
+*~
