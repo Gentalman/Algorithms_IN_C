@@ -1,5 +1,5 @@
 
-#### data_file include mush XXXXXdata.txt
+#### data_file folder include mush XXXXXdata.txt
 
 #### use XXXXXdata.txt as the program's input to test the algorithms
 
