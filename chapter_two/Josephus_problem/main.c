@@ -50,11 +50,5 @@ main(int argc, char **argv)
 	}
 	printf("The mumber is %d\n", current_node->item);
 
-/*	for (i = 1; i <= sum; i++) {
-		printf("%d ", current_node->item);
-		current_node = current_node->next;
-	}
-*/
-
 	return 0;
 }
