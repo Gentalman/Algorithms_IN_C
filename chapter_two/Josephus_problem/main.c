@@ -48,7 +48,10 @@ main(int argc, char **argv)
 		current_node->next = current_node->next->next;
 		free(delete_node);
 	}
+
 	printf("The mumber is %d\n", current_node->item);
+
+	free(current_node);
 
 	return 0;
 }
